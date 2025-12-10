@@ -2,7 +2,7 @@
     "name": "scarl/phpclase1811",
     "autoload": {
         "psr-4": {
-            "App\\model\\": "model/"
+            "App\\": "app/"
         }
     },
     "require": {}

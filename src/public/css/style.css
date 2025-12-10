@@ -1,0 +1,932 @@
+/* ------------------ FUENTE GLOBAL ------------------ */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&display=swap');
+
+/* Layout base para que el footer quede abajo SIEMPRE */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Merriweather', serif;
+    background-color: #fcf8f3;
+}
+
+/* Mantiene el footer al fondo */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fffaf0;
+    padding: 40px 0;
+}
+
+
+
+footer {
+    margin-top: auto;
+}
+
+/* -------- HEADER -------- */
+.header-libmichael {
+    background: #3e2723;
+    color: #fff;
+    padding: 15px 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    font-family: 'Georgia', serif;
+
+    /* NUEVO: Propiedades para fijar el header */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Asegura que esté por encima de todo */
+}
+.header-libmichael .header-container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-libmichael .logo a {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ffe0b2;
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.header-libmichael .logo span {
+    color: #ffcc80;
+}
+
+/* ---- BUSCADOR ---- */
+.header-libmichael .buscador {
+    flex: 1;
+    margin: 0 40px;
+    display: flex;
+    max-width: 450px;
+}
+
+.header-libmichael .buscador input {
+    width: 100%;
+    padding: 8px 12px;
+    border-radius: 5px 0 0 5px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+.header-libmichael .buscador button {
+    background: #ffb74d;
+    border: none;
+    padding: 0 15px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    color: #3e2723;
+    font-size: 18px;
+    transition: .2s;
+}
+
+.header-libmichael .buscador button:hover {
+    background: #ffa726;
+}
+
+/* ---- NAV ---- */
+.header-libmichael .nav-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.header-libmichael .nav-header .btn {
+    color: #ffe0b2;
+    text-decoration: none;
+    padding: 8px 14px;
+    border: 1px solid #ffcc80;
+    border-radius: 5px;
+    transition: .2s;
+    font-size: 15px;
+}
+
+.header-libmichael .nav-header .btn:hover {
+    background: #ffcc80;
+    color: #3e2723;
+}
+
+/* ---- CARRITO ---- */
+.header-libmichael .carrito {
+    position: relative;
+    color: #ffe0b2;
+    font-size: 22px;
+    text-decoration: none;
+}
+
+.header-libmichael .carrito .contador {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background: #ff7043;
+    width: 18px;
+    height: 18px;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #fff;
+}
+
+/* -------- FOOTER -------- */
+.footer-libmichael {
+    background: #4e342e;
+    color: #ffe0b2;
+    padding: 40px 0 20px;
+    font-family: 'Georgia', serif;
+}
+
+.footer-libmichael .footer-container {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-libmichael .footer-col {
+    width: 30%;
+    min-width: 200px;
+    margin-bottom: 20px;
+}
+
+.footer-libmichael h3,
+.footer-libmichael h4 {
+    margin-bottom: 10px;
+    color: #ffcc80;
+}
+
+.footer-libmichael a {
+    display: block;
+    color: #ffe0b2;
+    text-decoration: none;
+    margin: 5px 0;
+    transition: .2s;
+}
+
+.footer-libmichael a:hover {
+    color: #ffcc80;
+}
+
+.footer-copy {
+    text-align: center;
+    margin-top: 20px;
+    color: #ffcc80;
+}
+
+/* ------------------ FORM LOGIN BONITO ------------------ */
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Merriweather', serif;
+    background-color: #fcf8f3;
+
+    /* NUEVO: Espacio para que el header fijo no tape el contenido */
+    padding-top: 50px;
+    box-sizing: border-box; /* Asegura que el padding no rompa el ancho */
+}
+
+
+
+.form-login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.form-login {
+    background: #ffffff;
+    padding: 40px 35px;
+    width: 380px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    text-align: center;
+    animation: fadeIn .4s ease-out;
+}
+
+.form-login h2 {
+    margin-bottom: 20px;
+    color: #4e342e;
+    font-size: 26px;
+}
+
+/* Error */
+.error-msg {
+    text-align: center;
+    background-color: #ffebee;
+    color: #c62828;
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    border: 1px solid #ef9a9a;
+    font-size: 15px;
+}
+
+.success-msg {
+    text-align: center;
+    background-color: #e8f5e9;   /* Verde muy suave */
+    color: #2e7d32;             /* Verde principal */
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    border: 1px solid #a5d6a7;  /* Verde más claro */
+    font-size: 15px;
+}
+
+
+/* Inputs */
+.form-login label {
+    color: #4e342e;
+    font-size: 17px;
+    display: block;
+    margin-top: 15px;
+    text-align: left;
+}
+
+.form-login input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccb7a1;
+    margin-top: 8px;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+.form-login input:focus {
+    border-color: #ffb74d;
+    box-shadow: 0 0 6px rgba(255,183,77,0.7);
+}
+
+/* Botón login estilo madera */
+.btn-login {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    background: #8d6e63;
+    color: #fff8e1;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.25s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+.btn-login:hover {
+    background: #795548;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+}
+
+/* Botón registro */
+.btn-register-brown {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+    margin-top: 18px;
+    background-color: #6d4c41;
+    color: #fff8e1;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.25s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+.btn-register-brown:hover {
+    background-color: #5d4037;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+}
+
+/* Animación */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+/* ---- GRID DE LIBROS ---- */
+section {
+    width: 90%;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+/* ---- TARJETA DE CADA LIBRO ---- */
+.card {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    text-align: center;
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.card img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card h2 {
+    font-size: 18px;
+    color: #4e342e;
+    min-height: 48px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.25);
+}
+
+.card button {
+    margin-top: 10px;
+    width: 100%;
+}
+h1 {
+    text-align: center;
+    width: 100%;
+    margin-top: 30px;
+    color: #4e342e;
+}
+/* --------------------------------------- */
+/*   ESTILO PROFESIONAL PARA DETALLES      */
+/* --------------------------------------- */
+
+.book-details {
+    width: 90%;
+    max-width: 1100px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    animation: fadeIn .4s ease-out;
+}
+
+.book-details h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #4e342e;
+    font-size: 32px;
+    border-bottom: 3px solid #ffcc80;
+    padding-bottom: 10px;
+}
+
+.details-container {
+    display: flex;
+    gap: 35px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+/* Imagen del libro */
+.details-container img {
+    width: 260px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.25);
+    border: 3px solid #ffe0b2;
+}
+
+/* Información */
+.details-container .info {
+    flex: 1;
+    min-width: 280px;
+    font-size: 18px;
+    color: #4e342e;
+}
+
+.details-container .info p {
+    margin: 10px 0;
+    padding: 8px 0;
+    border-bottom: 1px solid #efebe9;
+}
+
+.details-container .info p strong {
+    color: #6d4c41;
+}
+
+/* Precio destacado */
+.details-container .price {
+    background-color: #ffecb3;
+    border-left: 5px solid #ffb74d;
+    padding: 12px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+/* Botón agregar al carrito */
+.details-container button {
+    background-color: #8d6e63;
+    color: #fff8e1 !important;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: 0.25s ease;
+    box-shadow: 0px 4px 10px rgba(0,0,0,0.25);
+}
+
+.details-container button:hover {
+    background-color: #795548;
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 14px rgba(0,0,0,0.3);
+}
+
+/* Animación global */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* ----------------------------------------- */
+/*   ESTILO PROFESIONAL PARA EL CARRITO      */
+/* ----------------------------------------- */
+
+/* Título */
+.titulo-carrito {
+    text-align: center;
+    margin: 35px 0;
+    color: #4e342e;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+/* Contenedor general */
+.carrito-contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding-bottom: 40px;
+}
+
+/* Mensaje carrito vacío */
+.carrito-vacio {
+    text-align: center;
+    font-size: 22px;
+    color: #6d4c41;
+    background: #fff3e0;
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 6px solid #ffb74d;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* ---- CADA PRODUCTO DEL CARRITO ---- */
+.carrito-item {
+    display: flex;
+    background: #ffffff;
+    padding: 18px;
+    margin-bottom: 25px;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    gap: 25px;
+    align-items: center;
+    animation: fadeIn .4s ease-out;
+}
+
+.carrito-item img {
+    width: 170px;
+    height: auto;
+    border-radius: 10px;
+    border: 3px solid #ffe0b2;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Información del libro */
+.carrito-info {
+    flex: 1;
+    color: #4e342e;
+}
+
+.carrito-info h3 {
+    margin: 0;
+    font-size: 24px;
+    margin-bottom: 5px;
+    color: #3e2723;
+}
+
+.carrito-info .autor {
+    font-size: 17px;
+    color: #795548;
+    margin-bottom: 12px;
+}
+
+.carrito-info .precio {
+    background: #ffecb3;
+    display: inline-block;
+    padding: 8px 14px;
+    border-radius: 8px;
+    border-left: 5px solid #ffb74d;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.carrito-info .cantidad {
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+
+/* ---- BOTONES ---- */
+
+.btn-cantidad {
+    background: #8d6e63;
+    color: #fff8e1;
+    border: none;
+    padding: 8px 14px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 6px;
+    margin-right: 8px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.btn-cantidad:hover {
+    background: #6d4c41;
+    transform: translateY(-2px);
+}
+
+/* Botón eliminar */
+/* Botón de eliminar / acción negativa */
+.btn-eliminar {
+    background-color: #dc3545; /* Rojo intenso */
+    color: #fff; /* Texto blanco */
+    border: none; /* Sin borde */
+    padding: 12px 25px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de letra */
+    font-weight: bold; /* Letra en negrita */
+    border-radius: 8px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Animación suave */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Sombra ligera */
+}
+
+/* Efecto al pasar el mouse */
+.btn-eliminar:hover {
+    background-color: #c82333; /* Rojo más oscuro */
+    transform: translateY(-2px); /* Leve desplazamiento hacia arriba */
+    box-shadow: 0 6px 10px rgba(0,0,0,0.15); /* Sombra más intensa */
+}
+
+/* Efecto al hacer clic */
+.btn-eliminar:active {
+    transform: translateY(0); /* Vuelve a su posición */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Sombra normal */
+}
+
+
+/* Animación suave */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.btn-comprar {
+    background-color: #28a745; /* Verde atractivo */
+    color: #fff; /* Texto blanco */
+    border: none; /* Sin borde */
+    padding: 12px 25px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de letra */
+    font-weight: bold; /* Letra en negrita */
+    border-radius: 8px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Animación suave */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Sombra ligera */
+}
+
+/* Efecto al pasar el mouse */
+.btn-comprar:hover {
+    background-color: #218838; /* Verde más oscuro */
+    transform: translateY(-2px); /* Leve desplazamiento hacia arriba */
+    box-shadow: 0 6px 10px rgba(0,0,0,0.15); /* Sombra más intensa */
+}
+
+/* Efecto al hacer clic */
+.btn-comprar:active {
+    transform: translateY(0); /* Vuelve a su posición */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Sombra normal */
+}
+
+.checkout-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    gap: 40px;
+}
+.checkout-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    width: 80%;
+    margin: 40px auto;
+}
+
+.checkout-form-box,
+.checkout-cart-box {
+    width: 48%;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.checkout-form-box h2,
+.checkout-cart-box h2 {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.checkout-cart-box .carrito-item {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.checkout-cart-box .carrito-info h3 {
+    margin: 0;
+}
+
+.checkout-cart-box .total-compra {
+    margin-top: 15px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-align: right;
+}
+
+@media (max-width: 768px) {
+    .checkout-grid {
+        flex-direction: column;
+    }
+
+    .checkout-form-box,
+    .checkout-cart-box {
+        width: 100%;
+    }
+}
+
+.checkout-v2-grid {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+/* Caja del formulario */
+.checkout-v2-form-box, .checkout-v2-cart-box {
+    background: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    flex: 1 1 300px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Formulario más compacto */
+.checkout-v2-form-box form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.checkout-v2-form-box form input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.checkout-v2-btn-comprar {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #0077cc;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.checkout-v2-btn-comprar:hover {
+    background-color: #005fa3;
+}
+
+/* Carrito más compacto */
+.checkout-v2-item {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    align-items: center;
+}
+
+.checkout-v2-item img {
+    width: 80px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.checkout-v2-info h3 {
+    margin: 0 0 5px 0;
+    font-size: 16px;
+}
+
+.checkout-v2-info p {
+    margin: 2px 0;
+    font-size: 14px;
+}
+
+.checkout-v2-total {
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.checkout-v2-success-msg {
+    color: green;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+a {
+    text-decoration: none; /* Quita subrayado */
+}
+
+.factura-tabla {
+    width: 90%;
+    max-width: 900px;
+    margin: 30px auto;
+    border-collapse: separate;
+    border-spacing: 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    font-family: 'Merriweather', serif;
+}
+
+.factura-tabla thead {
+    background-color: #8d6e63; /* Marrón estilo madera */
+    color: #fff;
+    text-align: left;
+}
+
+.factura-tabla th {
+    padding: 12px 15px;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.factura-tabla tbody tr {
+    background-color: #fffaf0; /* Fondo cálido */
+    transition: background-color 0.2s;
+}
+
+.factura-tabla tbody tr:nth-child(even) {
+    background-color: #fff3e0; /* Alternancia sutil */
+}
+
+.factura-tabla tbody tr:hover {
+    background-color: #ffe0b2; /* Resalta fila al pasar el mouse */
+}
+
+.factura-tabla td {
+    padding: 12px 15px;
+    font-size: 15px;
+    color: #4e342e;
+}
+
+.factura-tabla td:last-child {
+    font-weight: bold;
+    color: #6d4c41;
+}
+
+.factura-tabla tfoot td {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: right;
+    padding: 15px;
+    background-color: #ffecb3;
+    color: #4e342e;
+    border-top: 2px solid #8d6e63;
+}
+
+/* Botón marrón para volver al inicio */
+.btn-volver-brown {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #8d6e63; /* Marrón estilo madera */
+    color: #fff8e1;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.25s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+.btn-volver-brown:hover {
+    background-color: #795548; /* Marrón más oscuro */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+}
+
+.btn-volver-brown:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+.centrado {
+    display: flex;
+    justify-content: center; /* Centra el enlace horizontalmente */
+    align-items: center; /* Centra el enlace verticalmente si tiene una altura */
+    height: 100%; /* Ocupa toda la altura de su contenedor */
+    text-align: center; /* Asegura que el texto dentro también esté centrado */
+}
+
+
+.select-container {
+    margin-bottom: 20px;
+}
+
+/* Estilo de los labels */
+.select-label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #5D4037; /* Marrón oscuro */
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+/* Estilo de los selects */
+.select-box {
+    width: 100%;
+    padding: 10px 12px;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    border: 1px solid #A1887F; /* Marrón claro para el borde */
+    border-radius: 6px;
+    background-color: #FFF8E1; /* Fondo crema */
+    transition: border-color 0.3s, box-shadow 0.3s;
+    appearance: none; /* Quita estilo por defecto de navegador */
+    cursor: pointer;
+    color: #5D4037; /* Texto marrón */
+}
+
+/* Efecto al enfocar */
+.select-box:focus {
+    border-color: #8D6E63; /* Marrón medio */
+    box-shadow: 0 0 5px rgba(141, 110, 99, 0.5);
+    outline: none;
+}
+
+/* Flecha personalizada */
+.select-box {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%235D4037' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 10px;
+}
+.factura-tabla {
+    margin: 0 auto 30px auto;
+    width: 90%;
+}
+
+.factura-main {
+    flex: 1;
+    background-color: #fffaf0;
+    padding: 40px 0;
+    text-align: center;
+    display: block;
+}
